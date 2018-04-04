@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="254">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2116">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
     <scenes>
         <scene sceneID="253">
             <objects>
-                <viewController id="254" sceneMemberID="viewController" title="iOS Persistence">
+                <viewController id="254" sceneMemberID="viewController" title="Home">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="251"/>
                         <viewControllerLayoutGuide type="bottom" id="252"/>
@@ -20,51 +20,116 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="719" translatesAutoresizingMaskIntoConstraints="NO" spacing="20" fixedFrame="YES">
-                                <rect key="frame" x="117" y="203" width="141" height="261"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" id="719" translatesAutoresizingMaskIntoConstraints="NO" spacing="20" horizontalHuggingPriority="40" verticalHuggingPriority="1" horizontalCompressionResistancePriority="746" verticalCompressionResistancePriority="749" axis="vertical" misplaced="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="720" translatesAutoresizingMaskIntoConstraints="NO" text="Nombre:">
-                                        <rect key="frame" x="0.0" y="0.0" width="141" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="721" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Ingrese el nombre">
-                                        <rect key="frame" x="0.0" y="40.5" width="141" height="30"/>
+                                        <rect key="frame" x="0.0" y="40.5" width="375" height="436"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefono:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="722" translatesAutoresizingMaskIntoConstraints="NO">
-                                        <rect key="frame" x="0.0" y="90.5" width="141" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="496.5" width="375" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ingrese el telefono" borderStyle="roundedRect" minimumFontSize="17" id="723" translatesAutoresizingMaskIntoConstraints="NO">
-                                        <rect key="frame" x="0.0" y="131" width="141" height="30"/>
+                                        <rect key="frame" x="0.0" y="537" width="375" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="724" translatesAutoresizingMaskIntoConstraints="NO">
-                                        <rect key="frame" x="0.0" y="181" width="141" height="30"/>
-                                        <state key="normal" title="Guardar"/>
+                                        <rect key="frame" x="0.0" y="587" width="375" height="30"/>
+                                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.12941176470588237" green="0.45098039215686275" blue="0.85098039215686272" alpha="1"/>
+                                        <state key="normal" title="Guardar">
+                                            <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="725" translatesAutoresizingMaskIntoConstraints="NO">
-                                        <rect key="frame" x="0.0" y="231" width="141" height="30"/>
-                                        <state key="normal" title="Ver contactos"/>
+                                        <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.058823529411764705" green="0.86274509803921573" blue="0.2196078431372549" alpha="1"/>
+                                        <state key="normal" title="Ver contactos">
+                                            <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                <real key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue id="1864" destination="1664" kind="show"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                         </subviews>
+                        <constraints>
+                            <constraint id="1188" firstItem="719" firstAttribute="topMargin" secondItem="251" secondAttribute="bottom" constant="20"/>
+                            <constraint id="1190" firstItem="719" firstAttribute="leftMargin" secondItem="255" secondAttribute="leftMargin" constant="20"/>
+                            <constraint id="1191" firstItem="255" firstAttribute="rightMargin" secondItem="719" secondAttribute="right" constant="20"/>
+                        </constraints>
                     </view>
-                    <navigationItem title="Title" id="483" key="navigationItem"/>
+                    <navigationItem title="Home" id="483" key="navigationItem"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="256" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-832" y="-404"/>
+        </scene>
+        <scene sceneID="1663">
+            <objects>
+                <tableViewController id="1664" sceneMemberID="viewController" title="Contacts">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1665">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1668">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1668" id="1669">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1664" id="1666"/>
+                            <outlet property="delegate" destination="1664" id="1667"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1670" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-373" y="-394"/>
+        </scene>
+        <scene sceneID="2115">
+            <objects>
+                <navigationController id="2116" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2118">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="2263" destination="254" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2119" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1313" y="-406"/>
         </scene>
     </scenes>
 </document>
