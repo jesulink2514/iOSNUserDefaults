@@ -8,24 +8,15 @@ namespace iOSPersistence
     [Register("AppDelegate")]
     public class AppDelegate : UIApplicationDelegate
     {
-        // class-level declarations
-
         public override UIWindow Window
         {
             get;
             set;
         }
-
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            // create a new window instance based on the screen size
-            Window = new UIWindow(UIScreen.MainScreen.Bounds);
-
-            // If you have defined a root view controller, set it here:
-            // Window.RootViewController = myViewController;
-
-            // make the window visible
-            Window.MakeKeyAndVisible();
+            // Override point for customization after application launch.
+            // If not required for your application you can safely delete this method
 
             return true;
         }
