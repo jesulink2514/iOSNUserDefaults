@@ -10,7 +10,7 @@
     <scenes>
         <scene sceneID="253">
             <objects>
-                <viewController id="254" sceneMemberID="viewController" title="Home">
+                <viewController id="254" sceneMemberID="viewController" title="Home" customClass="HomeViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="251"/>
                         <viewControllerLayoutGuide type="bottom" id="252"/>
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" id="719" translatesAutoresizingMaskIntoConstraints="NO" spacing="20" horizontalHuggingPriority="40" verticalHuggingPriority="1" horizontalCompressionResistancePriority="746" verticalCompressionResistancePriority="749" axis="vertical" misplaced="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES">
+                            <stackView opaque="NO" contentMode="scaleToFill" id="719" translatesAutoresizingMaskIntoConstraints="NO" spacing="20" horizontalHuggingPriority="40" verticalHuggingPriority="1" horizontalCompressionResistancePriority="746" verticalCompressionResistancePriority="749" misplaced="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" distribution="equalSpacing">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="720" translatesAutoresizingMaskIntoConstraints="NO" text="Nombre:">
@@ -30,25 +30,25 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="721" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Ingrese el nombre">
-                                        <rect key="frame" x="0.0" y="40.5" width="375" height="436"/>
+                                        <rect key="frame" x="0.0" y="121.5" width="375" height="30"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefono:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="722" translatesAutoresizingMaskIntoConstraints="NO">
-                                        <rect key="frame" x="0.0" y="496.5" width="375" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="253" width="375" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ingrese el telefono" borderStyle="roundedRect" minimumFontSize="17" id="723" translatesAutoresizingMaskIntoConstraints="NO">
-                                        <rect key="frame" x="0.0" y="537" width="375" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="723" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Ingrese el telefono">
+                                        <rect key="frame" x="0.0" y="374.5" width="375" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="724" translatesAutoresizingMaskIntoConstraints="NO">
-                                        <rect key="frame" x="0.0" y="587" width="375" height="30"/>
+                                        <rect key="frame" x="0.0" y="506" width="375" height="30"/>
                                         <color key="backgroundColor" colorSpace="calibratedRGB" red="0.12941176470588237" green="0.45098039215686275" blue="0.85098039215686272" alpha="1"/>
                                         <state key="normal" title="Guardar">
                                             <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
@@ -79,7 +79,7 @@
                         </subviews>
                         <constraints>
                             <constraint id="1188" firstItem="719" firstAttribute="topMargin" secondItem="251" secondAttribute="bottom" constant="20"/>
-                            <constraint id="1190" firstItem="719" firstAttribute="leftMargin" secondItem="255" secondAttribute="leftMargin" constant="20"/>
+                            <constraint id="1190" firstItem="719" firstAttribute="leftMargin" secondItem="255" secondAttribute="left" constant="20"/>
                             <constraint id="1191" firstItem="255" firstAttribute="rightMargin" secondItem="719" secondAttribute="right" constant="20"/>
                         </constraints>
                     </view>
@@ -91,7 +91,7 @@
         </scene>
         <scene sceneID="1663">
             <objects>
-                <tableViewController id="1664" sceneMemberID="viewController" title="Contacts">
+                <tableViewController id="1664" sceneMemberID="viewController" title="Contacts" customClass="ContactsViewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1665">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

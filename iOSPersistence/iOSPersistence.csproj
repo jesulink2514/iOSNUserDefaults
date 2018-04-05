@@ -62,6 +62,14 @@
     <AppExtensionDebugBundleId />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ContactsViewController.cs" />
+    <Compile Include="ContactsViewController.designer.cs">
+      <DependentUpon>ContactsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeViewController.cs" />
+    <Compile Include="HomeViewController.designer.cs">
+      <DependentUpon>HomeViewController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Info.plist" />
