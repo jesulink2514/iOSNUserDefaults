@@ -1,5 +1,4 @@
-﻿using Foundation;
-using System;
+﻿using System;
 using UIKit;
 
 namespace iOSPersistence
