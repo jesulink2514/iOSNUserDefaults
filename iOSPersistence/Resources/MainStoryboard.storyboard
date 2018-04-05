@@ -57,7 +57,9 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections/>
+                                        <connections>
+                                            <action selector="UIButton724_TouchUpInside:" destination="254" id="2510" eventType="touchUpInside"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="725">
                                         <rect key="frame" x="0.0" y="231" width="374" height="30"/>

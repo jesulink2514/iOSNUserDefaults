@@ -14,8 +14,29 @@ namespace iOSPersistence
     [Register ("HomeViewController")]
     partial class HomeViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField NombreText { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField TelefonoText { get; set; }
+
+        [Action ("UIButton724_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void UIButton724_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
+            if (NombreText != null) {
+                NombreText.Dispose ();
+                NombreText = null;
+            }
+
+            if (TelefonoText != null) {
+                TelefonoText.Dispose ();
+                TelefonoText = null;
+            }
         }
     }
 }
