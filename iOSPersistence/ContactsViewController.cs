@@ -7,50 +7,41 @@ namespace iOSPersistence
 {
     public partial class ContactsViewController : UITableViewController
     {
-        public string Name { get; set; }
-        public string Phone { get; set; }
         public const string CellId = "ContactsCell";
         public ContactsViewController (IntPtr handle) : base (handle)
         {
             TableView.RegisterClassForCellReuse(typeof(UITableViewCell),CellId);
         }
 
-        public override void ViewDidAppear(bool animated)
+        public override async void ViewDidLoad()
         {
-            base.ViewDidAppear(animated);
-
-            TableView.DataSource = new ContactsDataSource(this);
-
+            var contacts = await Application.ContactsService.LeerContactos();
+            TableView.DataSource = new ContactsDataSource(contacts);
             TableView.ReloadData();
         }
     }
 
     public class ContactsDataSource : UITableViewDataSource
     {
-        private readonly ContactsViewController controller;
-        private readonly List<Tuple<string, string>> users;
+        private readonly List<Contacto> contactos;
 
-        public ContactsDataSource(ContactsViewController controller)
+        public ContactsDataSource(List<Contacto> contactos)
         {
-            this.controller = controller;
-            this.users = new List<Tuple<string,string>>()
-            {
-                new Tuple<string,string>(controller.Name,controller.Phone)
-            };
+            this.contactos = contactos;
         }
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             var cell = tableView.DequeueReusableCell(ContactsViewController.CellId);
-            var contact = users[indexPath.Row];
+            var contact = contactos[indexPath.Row];
 
-            cell.TextLabel.Text = $"{contact.Item1} - {contact.Item2}";
+            cell.TextLabel.Text = contact.ToString();
 
             return cell;
         }
 
         public override nint RowsInSection(UITableView tableView, nint section)
         {
-            return users.Count;    
+            return contactos.Count;    
         }
     }
 }

@@ -11,5 +11,7 @@ namespace iOSPersistence
             // you can specify it here.
             UIApplication.Main(args, null, "AppDelegate");
         }
+
+        public static ContactsFileService ContactsService = new ContactsFileService();
     }
 }

@@ -10,7 +10,7 @@ namespace iOSPersistence
         {
         }
 
-        partial void UIButton724_TouchUpInside(UIButton sender)
+        async partial void UIButton724_TouchUpInside(UIButton sender)
         {
             var nombre = NombreText.Text;
             NombreText.ResignFirstResponder();
@@ -20,21 +20,9 @@ namespace iOSPersistence
             TelefonoText.ResignFirstResponder();
             TelefonoText.Text = string.Empty;
 
-            var store = NSUserDefaults.StandardUserDefaults;
+           var contacto = new Contacto(nombre,phone);
 
-            store.SetString(nombre, "name");
-            store.SetString(phone, "phone");
-        }
-
-        public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
-        {
-            var cont = (ContactsViewController)segue.DestinationViewController;
-            var name = NSUserDefaults.StandardUserDefaults.StringForKey("name");
-            var phone = NSUserDefaults.StandardUserDefaults.StringForKey("phone");
-            cont.Name = name;
-            cont.Phone = phone;
-
-            base.PrepareForSegue(segue, sender);
+           await Application.ContactsService.GuardarContacto(contacto);
         }
     }
 }
